@@ -1,0 +1,2 @@
+# NSTimerInprovement
+Timer improvement:解决定时器循环应用bug并结合了NSRunloop
