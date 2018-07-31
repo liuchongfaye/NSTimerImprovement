@@ -1,2 +1,2 @@
 # NSTimerInprovement
-Timer improvement:解决定时器循环应用bug并结合了NSRunloop
+NSTimerInprovement解决了定时器循环应用bug并结合了NSRunloop（苹果官方文档提到过），同时还管理了NSTimer的生命周期
