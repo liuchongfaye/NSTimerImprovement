@@ -41,12 +41,30 @@
 //    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1.0 invocation:invocation repeats:YES];
 //    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerFire:) userInfo:nil repeats:YES];
 //    NSTimer *timer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(timerFire:) userInfo:nil repeats:YES];
-
     
+//    __weak __typeof(self) weakSelf = self;
+//    NSTimer *timer = [NSTimer timerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
+//        [self timerFire:timer];
+//    }];
+//
 //    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
     
-    NSTimerInprovement *timerInprovement = [NSTimerInprovement ns_timerWithTimeInterval:1.0 target:self selector:@selector(timerFire:) userInfo:nil repeats:YES];
-    self.timerInprovement = timerInprovement;
+//    NSTimerInprovement *timerInprovement = [NSTimerInprovement ns_timerWithTimeInterval:1.0 repeats:YES block:^(NSTimer *timer) {
+//        [self timerFire:timer];
+//    }];
+//    self.timerInprovement = timerInprovement;
+    
+    NSDate *date = [[NSDate date] dateByAddingTimeInterval:10.0];
+//    NSTimer *timer = [[NSTimer alloc] initWithFireDate:date interval:1.0 target:self selector:@selector(timerFire:) userInfo:nil repeats:YES];
+//    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+//    NSTimerInprovement *timerInprovement = [NSTimerInprovement ns_scheduledTimerWithFireDate:date interval:1.0 target:self selector:@selector(timerFire:) userInfo:nil repeats:YES];
+//    __weak typeof(self) weakSelf = self;
+//    NSTimerInprovement *timerInprovement = [NSTimerInprovement ns_scheduledTimerWithFireDate:date interval:1.0 repeats:YES block:^(NSTimer *timer) {
+//        [weakSelf timerFire:timer];
+//    }];
+//    self.timerInprovement = timerInprovement;
+    
+    // self -> timerInprovement -> timer -> block(timer) -> self
 }
 
 - (void)dealloc {
@@ -57,9 +75,11 @@
 
 - (void)timerFire:(NSTimer *)timer {
     NSInteger count = self.timerLabel.text.integerValue + 1;
-    if (count == 20) {
+    if (count == 10) {
         [self.timerInprovement.timer invalidate];
     }    self.timerLabel.text = [NSString stringWithFormat:@"%@", @(count)];
+    
+    NSLog(@"text = %@", self.timerLabel.text);
 }
 
 
