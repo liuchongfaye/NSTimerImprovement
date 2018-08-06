@@ -49,22 +49,35 @@
 //
 //    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
     
-//    NSTimerInprovement *timerInprovement = [NSTimerInprovement ns_timerWithTimeInterval:1.0 repeats:YES block:^(NSTimer *timer) {
-//        [self timerFire:timer];
-//    }];
-//    self.timerInprovement = timerInprovement;
+    // 方法1
+    //self.timerInprovement = [NSTimerInprovement ns_timerWithTimeInterval:1.0 target:self selector:@selector(timerFire:) userInfo:nil repeats:YES];
     
-    NSDate *date = [[NSDate date] dateByAddingTimeInterval:10.0];
-//    NSTimer *timer = [[NSTimer alloc] initWithFireDate:date interval:1.0 target:self selector:@selector(timerFire:) userInfo:nil repeats:YES];
-//    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
-//    NSTimerInprovement *timerInprovement = [NSTimerInprovement ns_scheduledTimerWithFireDate:date interval:1.0 target:self selector:@selector(timerFire:) userInfo:nil repeats:YES];
+    // 方法2
+    //self.timerInprovement = [NSTimerInprovement ns_scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerFire:) userInfo:nil repeats:YES];
+    
+    // 方法3
+    //__weak typeof(self) weakSelf = self;
+    //self.timerInprovement = [NSTimerInprovement ns_timerWithTimeInterval:1.0 repeats:YES block:^(NSTimer *timer) {
+    //    [weakSelf timerFire:timer];
+    //}];
+    
+    //方法4
 //    __weak typeof(self) weakSelf = self;
-//    NSTimerInprovement *timerInprovement = [NSTimerInprovement ns_scheduledTimerWithFireDate:date interval:1.0 repeats:YES block:^(NSTimer *timer) {
+//    self.timerInprovement = [NSTimerInprovement ns_scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer *timer) {
 //        [weakSelf timerFire:timer];
 //    }];
-//    self.timerInprovement = timerInprovement;
     
-    // self -> timerInprovement -> timer -> block(timer) -> self
+    //方法5
+//    NSDate *date = [[NSDate date] dateByAddingTimeInterval:10.0];
+//    self.timerInprovement = [NSTimerInprovement ns_scheduledTimerWithFireDate:date interval:1.0 target:self selector:@selector(timerFire:) userInfo:nil repeats:YES];
+    
+    //方法6
+    __weak typeof(self) weakSelf = self;
+    NSDate *date = [[NSDate date] dateByAddingTimeInterval:10.0];
+    self.timerInprovement = [NSTimerInprovement ns_scheduledTimerWithFireDate:date interval:1.0 repeats:YES block:^(NSTimer *timer) {
+        [weakSelf timerFire:timer];
+    }];
+    
 }
 
 - (void)dealloc {
