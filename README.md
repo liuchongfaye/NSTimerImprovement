@@ -1,5 +1,5 @@
 # NSTimerInprovement
-NSTimerInprovement这个库解决了定时器循环应用bug并结合了NSRunloop（苹果官方文档提到过），同时还管理了NSTimer的生命周期
+NSTimerInprovement这个库解决了定时器循环应用bug并结合了NSRunloop技术（NSTimer的苹果官方文档提到过），同时还管理了NSTimer的生命周期，丝毫不用关心NSTimer什么时候释放问题
 
 ## How to use
 在使用到定时器的对象声明一个属性，比如：
@@ -53,9 +53,14 @@ __weak typeof(self) weakSelf = self;
 ```
 除此之外，NSTimer 还有两个方法，是基于 NSInvocation 来实现的，这里就懒得实现了。
 
+加入要对NSTimer对象进行操作，比如执行'invalidate'操作，那么只需要可以从 NSTimerInprovement 的对象的.h中获取到NSTimer对象(为了安全考虑，此属性是只读的），类似下面代码：
+```
+[self.timerInprovement.timer invalidate];
+```
+
 ### Installation(安装）
 
-可以下载此工程，将NSTimerInprovement这个类的 .h 与 .m 拖到自己的项目当中，也可以使用Cocoapods来下载，只需要在Podfile文件里写上下面代码再执行'pod install'就可以了：
+可以下载此工程，将NSTimerInprovement这个类的 .h 与 .m 拖到自己的项目当中，也可以使用Cocoapods来管理，只需要在Podfile文件里写上下面代码再执行'pod install'就可以了：
 ```
 pod 'NSTimerInprovement'
 ```
