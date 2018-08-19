@@ -1,6 +1,6 @@
 //
-//  NSTimerInprovement.h
-//  NSTimerInprovement
+//  NSTimerImprovement.h
+//  NSTimerImprovement
 //
 //  Created by lc on 2018/7/30.
 //  Copyright © 2018年 lc. All rights reserved.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <Foundation/NSDate.h>
 
-@interface NSTimerInprovement : NSObject
+@interface NSTimerImprovement : NSObject
 
 + (instancetype)ns_timerWithTimeInterval:(NSTimeInterval)ti target:(id)aTarget selector:(SEL)aSelector userInfo:(nullable id)userInfo repeats:(BOOL)yesOrNo;
 + (instancetype)ns_scheduledTimerWithTimeInterval:(NSTimeInterval)ti target:(id)aTarget selector:(SEL)aSelector userInfo:(nullable id)userInfo repeats:(BOOL)yesOrNo;

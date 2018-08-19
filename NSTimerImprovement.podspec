@@ -1,9 +1,9 @@
 
 Pod::Spec.new do |s|
 
-  s.name         = "NSTimerInprovement"
-  s.version      = "0.0.1"
-  s.summary      = "NSTimerInprovement：Some functions of NSTimer are improved"
+  s.name         = "NSTimerImprovement"
+  s.version      = "0.0.2"
+  s.summary      = "NSTimerImprovement：Some functions of NSTimer are improved"
   s.homepage     = "https://github.com/liuchongfaye/NSTimerInprovement"
   s.license      = "MIT"
   s.author       = { "刘冲" => "liuchongfaye@163.com" }

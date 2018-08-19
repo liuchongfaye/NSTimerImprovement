@@ -16,7 +16,7 @@
 		44A7897C210EE655007701A9 /* NSTimerInprovementTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A7897B210EE655007701A9 /* NSTimerInprovementTests.m */; };
 		44A78987210EE655007701A9 /* NSTimerInprovementUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A78986210EE655007701A9 /* NSTimerInprovementUITests.m */; };
 		44A7899D210F2059007701A9 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A7899C210F2059007701A9 /* TimerViewController.m */; };
-		44A789A9210F2DED007701A9 /* NSTimerInprovement.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A789A8210F2DED007701A9 /* NSTimerInprovement.m */; };
+		44A789A9210F2DED007701A9 /* NSTimerImprovement.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A789A8210F2DED007701A9 /* NSTimerImprovement.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +55,8 @@
 		44A78988210EE655007701A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44A7899B210F2059007701A9 /* TimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
 		44A7899C210F2059007701A9 /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
-		44A789A7210F2DED007701A9 /* NSTimerInprovement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSTimerInprovement.h; sourceTree = "<group>"; };
-		44A789A8210F2DED007701A9 /* NSTimerInprovement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSTimerInprovement.m; sourceTree = "<group>"; };
+		44A789A7210F2DED007701A9 /* NSTimerImprovement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSTimerImprovement.h; sourceTree = "<group>"; };
+		44A789A8210F2DED007701A9 /* NSTimerImprovement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSTimerImprovement.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,8 +144,8 @@
 		44A78994210EE7B2007701A9 /* NSTimer */ = {
 			isa = PBXGroup;
 			children = (
-				44A789A7210F2DED007701A9 /* NSTimerInprovement.h */,
-				44A789A8210F2DED007701A9 /* NSTimerInprovement.m */,
+				44A789A7210F2DED007701A9 /* NSTimerImprovement.h */,
+				44A789A8210F2DED007701A9 /* NSTimerImprovement.m */,
 			);
 			path = NSTimer;
 			sourceTree = "<group>";
@@ -281,7 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44A78967210EE652007701A9 /* ViewController.m in Sources */,
-				44A789A9210F2DED007701A9 /* NSTimerInprovement.m in Sources */,
+				44A789A9210F2DED007701A9 /* NSTimerImprovement.m in Sources */,
 				44A7899D210F2059007701A9 /* TimerViewController.m in Sources */,
 				44A78972210EE655007701A9 /* main.m in Sources */,
 				44A78964210EE652007701A9 /* AppDelegate.m in Sources */,
