@@ -60,10 +60,11 @@ __weak typeof(self) weakSelf = self;
 
 ### Installation(安装）
 
-可以下载此工程，将NSTimerInprovement这个类的 .h 与 .m 拖到自己的项目当中，也可以使用Cocoapods来管理，只需要在Podfile文件里写上下面代码再执行'pod install'就可以了：
+可以下载此工程，将NSTimerInprovement这个类的 .h 与 .m 拖到自己的项目当中。也可以使用Cocoapods来管理，只需要在Podfile文件里写上下面代码再执行'pod install'就可以了：
 ```
-pod 'NSTimerInprovement'
+pod 'NSTimerImprovement'        // 此版本适用于0.0.2以上的版本
 ```
+值得一提的是在上传第一个版本时，将工程以及类文件命名错了，为此0.0.1版本在podfile文件里是```pod 'NSTimerInprovement'```此版本以摒弃
 
 
 
